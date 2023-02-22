@@ -1,7 +1,11 @@
 class MaxHeap:
-    def __init__(self):
+    def __init__(self, h=None):
+        if h is None:
+            h = []
         self.heap = []
         self.size = -1
+        for el in h:
+            self.insert(el)
 
     def siftUp(self, index):
         while index > 0:
